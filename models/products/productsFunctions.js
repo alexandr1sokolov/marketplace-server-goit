@@ -1,15 +1,15 @@
-const PRODUCTS_MODEL = require('./productsSchema');
+const PRODUCTS_SCHEMA = require('./productsSchema');
 
 module.exports.getAll = function () {
-    return PRODUCTS_MODEL.find()
+    return PRODUCTS_SCHEMA.find()
 };
 
 module.exports.getById = function (paramsId) {
-    return PRODUCTS_MODEL.findById(paramsId)
+    return PRODUCTS_SCHEMA.findById(paramsId)
 };
 
 module.exports.add = function (data) {
-    let product = new PRODUCTS_MODEL({
+    let product = new PRODUCTS_SCHEMA({
         name: data.name,
         description: data.description,
         price: data.price,
@@ -29,7 +29,7 @@ module.exports.update = function (data, paramsId) {
         categories: data.categories
     };
 
-    return PRODUCTS_MODEL.findByIdAndUpdate( paramsId, { $set: updatedProduct }, {new: true})
+    return PRODUCTS_SCHEMA.findByIdAndUpdate( paramsId, { $set: updatedProduct }, {new: true})
 };
 
-module.exports.delete = function (paramsId) { return PRODUCTS_MODEL.findByIdAndRemove(paramsId) };
+module.exports.delete = function (paramsId) { return PRODUCTS_SCHEMA.findByIdAndRemove(paramsId) };
