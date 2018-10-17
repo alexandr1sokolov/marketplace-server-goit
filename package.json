@@ -1,0 +1,28 @@
+{
+  "name": "marketplace-server-goit",
+  "version": "1.0.0",
+  "description": "homework-4",
+  "main": "server.js",
+  "scripts": {
+    "start":"nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandr1sokolov/marketplace-server-goit.git"
+  },
+  "author": "Sokolov Alexandr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexandr1sokolov/marketplace-server-goit/issues"
+  },
+  "homepage": "https://github.com/alexandr1sokolov/marketplace-server-goit#readme",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "mongoose": "^5.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  }
+}
